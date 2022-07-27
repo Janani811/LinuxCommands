@@ -1,0 +1,62 @@
+Introduction
+POSIX Family
+•	POSIX stands for Portable Operating System Interface, and is an IEEE standard designed to facilitate application portability.
+•	The basic goal was to promote portability of application programs across UNIX system environments
+Linux
+•	Linux is an open-source operating system.
+•	An OS is a software that enables communication b/w software & hardware.
+Kernel
+A kernel is the central part of an operating system. It manages the operations of the computer and the hardware, most notably memory and CPU time.
+Is ubuntu is linux ?
+•	Ubuntu is open source and freely available operating system, one of the Linux distributions.
+Difference b/w Linux and Ubuntu
+•	Linux is the family of open-source operating systems which is based on Linux kernel (or) Linux is the core system,
+•	Ubuntu is a free open-source operating system and the Linux distribution which is based on Debian (or) Ubuntu is the distribution of Linux.	
+What is Distros?
+•	Distro (Distribution) is a term used to describe a specific distribution of Linux that is built from the common Linux operating system and includes additional applications. 
+              Example : Red Hat, Debian and SuSe are all examples of a distro.
+Linux Desktop Environment
+•	In computing, this is an implementation of the desktop metaphor made of a bundle of programs running on top of a computer operating system.
+•	This share a common graphical user interface (GUI).
+Example : GNOME ,Budgie, KDE plasma ,etc.,
+Console
+•	It the primary interface for managing a computer.
+•	It provides a way for the kernel and other processes to sends text-based messages to the user, and to receive text-based input from the user.
+
+Why should I learn Terminal  ?
+•	It allows us to send simple text commands to the computer to do things like copy a file, move, do complex automations etc., in easy ,fast and time consuming.
+Navigating File systems 
+•	Navigating the file system in Linux using the basics commands are
+Using Change Directory :
+•	cd / => Navigate into the root directory
+•	cd (or) cd ~ => Navigate to your own directory
+•	cd .. => to navigate up one directory
+•	cd - =>to navigate to the previous director
+Copy File and Directory :
+•	Copy the file.
+Syntax : cp thisfile  thatfile 
+Example : cp file newfile
+cp -i thisfile thatfile (use -i option if you want a confirmation before over writing the file)
+cp -r thisdir thatdir (use -r option if you want to copy a directory recursively)
+Rename or Move File  and Directory
+•	It is similar as copy but moves the file to new file and removes the original file .
+Syntax : mv thisfile thatfile
+	 mv thisdir thatdir
+Example  : mv file newfile
+              i  mv -i file1 file2 (if file2 already exist use -i for confirmation)
+         
+Read Files 
+•	Reading a file can be done in more ways .
+•	cat - It is used to display the content of a file on the screen .
+Syntax : cat filename
+Example  : cat hello.txt
+•	less  - It writes the content of the file into the screen a page at a time .
+Syntax : less filename
+Example : less hello.txt
+•	more – It is same as less .
+Syntax : more filename
+Example : more hello.txt
+Edit Files
+•	Using vim editor we can edit the file content .
+•	Type  “ i ” to insert content.
+•	To save a file ,escape from the insert mode click esc and then type “ :wq ” to save and exit from the vim editor..

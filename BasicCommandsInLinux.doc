@@ -1,0 +1,203 @@
+Basic commands
+1 . date - Display the date of today wit time.
+     $ date
+2. cal
+    $ cal 2021
+    $ cal 03 2021
+3. clear - clears screen.
+     $ clear
+4. ls - list directory contents .
+•	ls -l or ll  -   To list files in the current directory with detailed info.
+•	ls -lt         -   To list files in the current directory with detailed info sorted by date and time with 
+       the newest file first.
+•	ls -lh        -    To list files in the current directory with their size in human readable format.
+•	ls -la        -    To list all files including the hidden files with 
+        detailed info.
+•	ls -ltr       ¬-    To list files in the current directory with detailed info sorted by date and time with 
+        the newest file first.
+5. Pwd - Print working directory or your current location.
+    $ pwd
+6. CD - Change directory.
+•	cd  /usr/bin
+•	cd  ~ or cd takes your user's home directory
+•	cd ~user (another users's home directory)
+•	cd /
+•	e- cd -   (takes you to the previous directory)
+•	cd ..  (go up one level)
+7.  tty - Displays the terminal name you are currently logged on to.
+8. who - Lists currently logged-in users.
+9. whoami - Lists which user id you are logged in as currently.
+10. w - Shows who is logged in and what they are doing.
+11. logname - Print user's login name (even if user has switched ID)
+12. id - Print user and group id and group info
+13 .groups - Print the groups a user is part of.
+14. last - last command reports history or successfull logins and system reboots.
+15. lastlog - Shows most recent login of all users
+16. lastb - All failed user login attempts, shows username, time and tty.
+17. Copy - Copy file1 and name the copied file file2     cp file1 file2
+18. Delete - Delete a file
+   rm file2
+   rm -f filename (without asking for confirmation)
+19. Rename or move a file
+   mv file1 to file3
+20. Create a Directory called dir1
+   mkdir newdir
+21. Remove a directory
+  rmdir newdir
+22. Remove a directory with files in it.
+   rm -rf newdir
+-r = recursively
+-f = forcefully
+23. List history of your commands
+   history
+24. Re run a command from history by number
+ 	   !# (# represents the command number)
+25.  hostname - Lists your system name
+26. hostnamectl - Lists hostname and other system details
+27. cat /etc/hostname - Can also be changed by editing the file
+28.  Absolute Path: 
+- Starts with /, for example: /home/test
+- touch filename /home/test
+ 
+
+29. Relative Path:
+- Does not start with /
+- Depends on your current directory
+- Current directory is /home/test then;
+- touch filename (Creates file in current directory)
+30. Command Path
+- which cd
+ 	- which cat
+ 	- which touch
+•	“which” command shows the path to the command when run without using absolute path.
+•	 Output of above commands
+  Path: 
+-	/usr/bin/cd, 
+-	/usr/bin/cat,
+-	 /usr/bin/touch
+- cd /bin
+- ls (shows all commands)
+31. Compression Tools: - Compression tools are used to compress one or more files or an archive to         
+   save space.
+gzip -  This command creates a compressed file of each of the files specified and adds .gz    
+            extension to the files.
+            Example: gzip filename
+                       -  To uncompress use:
+            Example: gunzip filename (or) gzip -d filename
+bzip2 and bunzip2 
+            Example: bzip2 filename
+            Example: bunzip2 filename or bzip2 -d filename
+ 32. Create files and directories : Files can be create in multiple ways. However, directories can only be  
+  created with one command.
+	
+1.	Creating files using touch , cat and vi :
+Syntax :
+•	touch file1 - If the file already exists, it will update the timestamp on it to the current date and time.
+•	touch file1 file2…
+•	cat > filename
+•	vi filename – if file is already exist it opens vi editor, otherwise create it and open editor , add text ,then save and exit it.
+
+2.	Creating directories using mkdir command:
+Syntax :
+•	mkdir dir1 - To create a directory called dir1
+•	mkdir a b c - To create 3 directories a b c.
+•	mkdir -p 1/2/3 - To create hierarchy of sub-directories.
+33. Obtaining Linux Help
+- Using man (manual) pages.
+- man provides information about a command, its usage and available options.
+  Examples: 
+  man cat
+  man touch
+- Press Enter key to scroll by line.
+- Press spacebar to scroll by page.
+- h to get help    
+- q to quit out of man pages.
+- To search by keyword  man -k keyword
+   Example:  man -k passwd
+- Using help : Finding information by using --help  cat --help
+- Using "whatis" : Quick method for searching a command or file.
+ whatis cat
+ 		 whatis cd
+- Using info  info cat
+
+34. Counting Words ,letters  and characters 
+Word Count  wc filename
+                          Output :  76  252 1795
+76: 	Number of lines
+252: 	Number of Words
+1750: 	Number of Characters (or bytes)
+Options: 
+-l (Prints line count)
+-w (Prints word count)
+-c (Prints bytes count)
+-m (Prints character count)
+Example : wc -l /etc/profile  output : 76 lines
+                   cat -n /etc/profile
+35. Display file contents using cat ,less ,more ,head ,tail:
+	- Using cat  cat file name
+	- Using less : Similar to more command but offers some extended capabilities, it is also faster  
+                       than more as it does not need to read the entire file before it starts to 
+        show. less file1
+	- Using more : Displays long text files one page at a time, starting at the beginning.  more file1
+	- Using head : By default it displays ,first ten lines . head file1 (or) head -5 file(shows 1st 5 line)
+- Using tail: By default it displays ,last ten lines . tail file1 (or) tail -3 file (shows last 3 lines)
+36. Removing File and Directory
+	Removing file :
+	Syntax : 
+	rm file1
+rm -i file2 - To remove file with confirmation.
+rm -f file - To remove file forcefully (no confirmation).
+
+
+Removing Directory:
+rmdir dir1 - To delete an empty directory.
+rm -r dir1 - To delete a non empty directory recursively. 
+rm -rf dir1 - To remove a directory recursively and forcefully.
+37. Shell Script:
+•	Shell script is just a simple text file with ".sh" extension, having executable permission.
+For example: firstscript.sh
+Writing and executing a script:
+- Create a file in your current directory hello.sh.   touch hello.sh
+              - Edit file   vi hello.sh
+              - Write script and save file.
+#!/bin/bash
+# My first script
+                 echo "Hello World!" // actual script
+  :wq!  //type it to save and exit 
+- Make the script executable:  # chmod 744 hello.sh
+- Run the script:  ./hello.sh
+   Output:
+   Hello World!
+38. Find 
+-	Search file by using  name and size 
+-	find . -size -1M
+-	find / -name files
+39. Modifying permissions
+•	r = read, w = write, x = execute
+•	u = user owner, g = group owner ,o = others (or public)
+•	r = 4, w = 2, x = 1, rwx   = 7
+Example : chmod 777 file
+chmod go-rw file - Change rights of a file - remove read, write and execute rights for       group and others via symbolic notation.
+chmod go+rw file - To re-add read and write rights back to group & others
+chmod a=rwx file - Assign read rights to all users
+40. Bash (bourne again shell) Shell: 
+•	The shell is referred to as the command interpreter and it is an interface between a user and the kernel.
+•	Shell accepts instructions from users (or scripts),interprets them and passes them on to kernel for processing. 
+•	Kernel then utilizes all hardware and software components required for successfully processing the
+•	instructions.
+41. Variables: 
+•	A variable is a temporary storage of data in memory.
+•	Stored information is used for customizing the shell environment and by many system and application processes to function properly. 
+•	There are 2 types of variables: local and environment.
+•	The value of a local variable is only available in the current shell and not in the sub-shell.
+•	The value of an environment variable can be passed from current to sub-shell during the execution of a
+•	script. Which means value stored in an environment variable is passed from the parent process to the child process.
+•	Defining a variable  var_name = value
+•	Display this variable  echo $var_name
+•	To make this variable as environment variable  export var_name
+•	To undefine this variable  unset VR1
+
+
+
+Thank You  :)
+
